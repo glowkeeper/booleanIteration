@@ -10,7 +10,7 @@ August 2021
 
 # Lecture Overview
 
-+ Loops and iteration - a primer
++ Loops and iteration
 + Javascript loops
 + Some examples
 + Exercise
@@ -20,15 +20,14 @@ August 2021
 
 # Goals
 
-1. Introduce iteration
-2. Introduce Javascript loops
-3. The **overarching** aim is to encourage you to begin your programming journey by _writing some code_!
+1. Introduce iteration and Javascript loops
+2. The **overarching** aim is to encourage you to begin your programming journey by _writing some code_!
 
 - - -
 
 # What is Iteration?
 
-Iteration is the process of repeating steps. for example, I conduct an iterative ritual each morning:
+Iteration is the process of repeating steps. For example, I conduct an iterative ritual each morning:
 
 1. Put water in a kettle and switch it on
 2. Meanwhile, grind coffee beans and put the ground coffee in a carafe
@@ -39,7 +38,7 @@ Iteration is the process of repeating steps. for example, I conduct an iterative
 
 # Loops
 
-In programming, iteration is often referred to as ‘looping’, because when a program iterates it ‘loops’ through steps. Programming languages implement iteration using statements like `for` and `while`.
+In programming, iteration is often referred to as _looping_, because when a program iterates, it _loops_ through steps. Programming languages implement iteration using statements like `for` and `while`.
 
 ```javascript
 while (true) {
@@ -69,8 +68,8 @@ Javascript has three basic looping statements:
 
 1. Set the total to 0
 2. Repeat this section five times
-    2.1. Generate a single-digit number
-    2.2. Add the number to the total
+    2. Generate a single-digit number
+    2. Add the number to the total
 3. Go back to step 2
 4. Output the total
 
