@@ -68,8 +68,8 @@ Javascript has three basic looping statements:
 
 1. Set the total to 0
 2. Repeat this section five times
-    2. Generate a single-digit number
-    2. Add the number to the total
+    52. Generate a single-digit number
+    53. Add the number to the total
 3. Go back to step 2
 4. Output the total
 
