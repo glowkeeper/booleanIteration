@@ -43,12 +43,12 @@ Iteration is the process of repeating steps. For example, I conduct an iterative
 In programming, iteration is often referred to as _looping_, because when a program iterates, it _loops_ through steps. Programming languages implement iteration using statements like `for` and `while`.
 
 ```javascript
+let done = false;
 while (true) {
-  // do something
+  // do something that might set done to true
   if (done) {
     break;
   }
-  // maybe do something else
 }
 ```
 
@@ -93,9 +93,9 @@ console.log(total);
 
 **Where possible, use the array method `forEach`, not `for`**
 
-The `for` loop has its origins in early computer languages like _Fortran_ and _C_, and its control structure, _{initialisation; condition; increment}_ can be a little daunting on first view. Besides, often that control structure is _too much detail_. 
+The `for` loop has its origins in early computer languages like _Fortran_ and _C_, and its control structure, `{initialisation; condition; increment}` can be a little daunting on first view. Besides, often that control structure is _too much detail_.
 
-When all you want to do is _do something to each element of a list_, `forEach` is a much better option.
+When you want to _do something to each element of a list_, `forEach` is often a better choice than `for`.
 
 - - -
 
@@ -106,11 +106,18 @@ const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
 coffee.forEach(element => console.log(element));
 ```
 
+```javascript
+const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
+for (let i = 0; i < coffee.length; i++) {
+  console.log(coffee);
+}
+```
+
 - - -
 
 # Conditional Loops
 
-A conditional loop continues while (or until) a condition is met.
+A conditional loop continues _while_ (or _until_) a condition is met.
 
 ```javascript
 do {
@@ -123,17 +130,17 @@ do {
 
 # Conditional Loops - A Note of Caution
 
-Be careful using conditional loops because if the condition is never met, they will loop forever.
+Be careful using conditional loops because if the condition is never met, they might loop forever.
 
 ```javascript
 const iceCapsAreMelting = true;
 let polarBears = 5;
 
-// Initiate infinite loop
+// Initiate (possible) infinite loop
 while (iceCapsAreMelting) {
   console.log(`There are ${polarBears} polar bears.`);
   polarBears--;
-  // Terminate infinite loop when following condition is true
+  // Terminate the loop if the following condition is true
   if (polarBears === 0) {
     console.log("There are no polar bears left.");
     break;
@@ -162,8 +169,7 @@ while (iceCapsAreMelting) {
 # Recap
 
 + An introduction to loops and iteration
-+ Javascript loops
-+ _My opinion_
++ Javascript loops `for`, `while` and `do`
 + Some examples
 
 - - -
