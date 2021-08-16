@@ -101,10 +101,14 @@ When you want to _do something to each element of a list_, `forEach` is often a 
 
 # An Opinionated Viewpoint (cont'd)
 
+1. `forEach`
+
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
 coffee.forEach(element => console.log(element));
 ```
+
+2. `for`
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
