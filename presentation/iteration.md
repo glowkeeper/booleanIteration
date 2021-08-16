@@ -36,6 +36,8 @@ Iteration is the process of repeating steps. For example, I conduct an iterative
 5. Pour the coffee
 6. Repeat from step 1 until I feel ready to go about my day
 
+- - -
+
 # Loops
 
 In programming, iteration is often referred to as _looping_, because when a program iterates, it _loops_ through steps. Programming languages implement iteration using statements like `for` and `while`.
@@ -73,6 +75,8 @@ Javascript has three basic looping statements:
 3. Go back to step 2
 4. Output the total
 
+- - -
+
 # Count Control Loops (cont'd)
 
 ```javascript
@@ -82,6 +86,8 @@ for (let i = 0; i < 5; i++) {
 }
 console.log(total);
 ```
+
+- - -
 
 # An Opinionated Viewpoint
 
@@ -113,6 +119,8 @@ do {
 } while (hasTime);
 ```
 
+- - -
+
 # Conditional Loops - A Note of Caution
 
 Be careful using conditional loops because if the condition is never met, they will loop forever.
@@ -132,6 +140,8 @@ while (iceCapsAreMelting) {
   }
 }
 ```
+
+- - -
 
 # Examples
 
