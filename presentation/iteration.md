@@ -39,7 +39,9 @@ Iteration is the process of repeating steps. For example, I conduct an iterative
 
 # Loops
 
-In programming, iteration is often referred to as _looping_, because when a program iterates, it _loops_ through steps. Programming languages implement iteration using statements like `for` and `while`.
+In programming, iteration is often referred to as _looping_, because when a program iterates, it _loops_ through steps.
+
+Programming languages implement loops using statements like `for` and `while`.
 
 ```javascript
 let done = false;
@@ -50,6 +52,7 @@ while (true) {
   }
   // maybe do something else
 }
+// do something after the loop
 ```
 
 - - -
@@ -68,7 +71,7 @@ Javascript has three basic looping statements:
 
 `for` statements are a form of _count control_ loop, which are useful when you need to iterate a specific number of times.
 
-Imagine you want to sum all numbers from 1 to 5:
+Imagine you want to sum all the numbers from 1 to 5:
 
 1. Set the total to 0
 2. for a count from 1 to 5
@@ -101,7 +104,7 @@ When you want to _do something to each element of an array_, `forEach` might be 
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
-coffee.forEach(forEach => console.log(element));
+coffee.forEach(element => console.log(element));
 ```
 
 `for`
@@ -109,7 +112,7 @@ coffee.forEach(forEach => console.log(element));
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
 for (let i = 0; i < coffee.length; i++) {
-  console.log(coffee);
+  console.log(coffee[i]);
 }
 ```
 
@@ -125,6 +128,7 @@ do {
   // drink coffee
   // contemplate my day until hasTime = false
 } while (hasTime);
+// do something after the loop
 ```
 
 - - -
@@ -141,7 +145,7 @@ while (iceCapsAreMelting) {
   polarBears--;
   // Terminate the loop if the following condition is true
   if (polarBears === 0) {
-    console.log("There are no polar bears left.");
+    console.log("There are no polar bears left. Boo");
     break;
   }
 }
@@ -154,31 +158,55 @@ console.log("The ice caps have melted. The polar bears are gone. WE. ARE. DOOMED
 
 # Example
 
+The html:
+
 ```html
+<!DOCTYPE html>
 <html>
   <head>
-    <title>Console Demo</title>
+    <title>Boolean Exercises</title>
+    <meta charset="UTF-8" />
+    <script src="src/index.js"></script>
   </head>
-  <body>
-    <h1>Climate Change!</h1>
-    <script>
-      const iceCapsAreMelting = true;
-      let polarBears = 5;
 
-      // Initiate (possible) infinite loop
-      while (iceCapsAreMelting) {
-        console.log(`There are ${polarBears} polar bears.`);
-        polarBears--;
-        // Terminate the loop if the following condition is true
-        if (polarBears === 0) {
-          console.log("There are no polar bears left.");
-          break;
-        }
-      }
-      console.log(`The ice caps have melted. The polar bears are gone. We're doomed :(`);
-    </script>
+  <body>
+    <h1>Exercises</h1>
+    <p id="bears"></p>
+    <h2 id="result"></h2>
   </body>
 </html>
+  ```
+
+# Example (cont'd)
+
+The Javascript:
+
+```javascript
+const bears = document.getElementById("bears");
+const result = document.getElementById("result");
+
+const noBears = "There are no polar bears left. Boo\n";
+const doomed = "The ice caps have melted. The polar bears are gone. WE. ARE. DOOMED :(";
+
+const iceCapsAreMelting = true;
+let polarBears = 5;
+
+// Initiate (possible) infinite loop
+while (iceCapsAreMelting) {
+  const numBears = `There are ${polarBears} polar bears`;
+  bears.innerText += numBears + "\n";
+  console.log(numBears);
+
+  polarBears--;
+  // Terminate the loop if the following condition is true
+  if (polarBears === 0) {
+    bears.innerText += noBears;
+    console.log(numBears);
+    break;
+  }
+}
+result.innerText += doomed;
+console.log(doomed);
 ```
 
 - - -
