@@ -1,6 +1,6 @@
 # Boolean Iteration
 
-Presentation on Loops and Iteration for [Boolean](https://boolean.co.uk/).
+[Presentation](/presentation/iteration.md) on Loops and Iteration for [Boolean](https://boolean.co.uk/).
 
 ## License
 
