@@ -12,16 +12,15 @@ August 2021
 
 + Loops and iteration
 + Javascript loops
-+ Some examples
-+ Exercise
-+ Useful resources
++ Exercises
 
 - - -
 
 # Goals
 
-1. Introduce iteration and Javascript loops
-2. The **overarching** aim is to encourage you to begin your programming journey by _writing some code_!
+1. Introduce iteration and looping
+2. Javascript loops
+3. The **overarching** aim is to encourage you to begin your programming journey by _writing some code_!
 
 - - -
 
@@ -100,7 +99,7 @@ When you want to _do something to each element of an array_, `forEach` might be 
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
-coffee.forEach(element => console.log(element));
+coffee.forEach(forEach => console.log(element));
 ```
 
 2. `for`
@@ -116,7 +115,7 @@ for (let i = 0; i < coffee.length; i++) {
 
 # Conditional Loops
 
-A conditional loop continues _while_ (or _until_) a condition is met.
+A conditional loop iterates _while_ (or _until_) a condition is met.
 
 ```javascript
 let hasTime = true;
@@ -128,9 +127,7 @@ do {
 
 - - -
 
-# Conditional Loops - A Note of Caution
-
-Be careful using conditional loops because if the condition is never satisfied, they might loop forever.
+# Conditional Loops (cont'd)
 
 ```javascript
 const iceCapsAreMelting = true;
@@ -148,6 +145,8 @@ while (iceCapsAreMelting) {
 }
 console.log(`The ice caps have melted. The polar bears are gone. We're doomed :(`);
 ```
+
+**Note**: Be careful using conditional loops because if the condition is never satisfied, they might loop forever.
 
 - - -
 
