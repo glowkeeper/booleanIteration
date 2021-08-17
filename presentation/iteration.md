@@ -49,6 +49,7 @@ while (true) {
   if (done) {
     break;
   }
+  // maybe do something else
 }
 ```
 
@@ -66,40 +67,34 @@ Javascript has three basic looping statements:
 
 # Count Control Loops
 
-`for` statements are a form of _count control_ loop, which are useful when it is necessary to iterate a specific number of times.
+`for` statements are a form of _count control_ loop, which are useful when you need to iterate a specific number of times.
 
 1. Set the total to 0
-2. Repeat this section five times
-    1. Generate a single-digit number
-    2. Add the number to the total
-3. Go back to step 2
-4. Output the total
+2. for a count from 1 to 5
+    1. Add the count to the total
+3. Output the total (the sum of all numbers between 1 and 5)
 
 - - -
 
 # Count Control Loops (cont'd)
 
+Javascript `for` loops have a control structure of the form _{initialisation; condition; increment}_
+
 ```javascript
 let total = 0;
-for (let i = 0; i < 5; i++) {
-  total += Math.floor(Math.random() * 10); 
+for (let i = 1; i <= 5; i++) {
+  total += i;
 }
 console.log(total);
 ```
 
-- - -
-
-# `forEach` vs `for`
-
-**Where possible, use `forEach`, not `for`**
-
-The `for` loop has its origins in early computer languages like _Fortran_ and _C_, and its control structure, `{initialisation; condition; increment}` can be a little daunting on first view. Besides, often that control structure is _too much detail_.
-
-When you want to _do something to each element of an array_, `forEach` is often a better choice than `for`.
+The control structure of a `for` loop can appear quite challenging at first.
 
 - - -
 
-# `forEach` vs `for` (cont'd)
+# forEach
+
+When you want to _do something to each element of an array_, `forEach` might be a better choice.
 
 1. `forEach`
 
@@ -124,9 +119,10 @@ for (let i = 0; i < coffee.length; i++) {
 A conditional loop continues _while_ (or _until_) a condition is met.
 
 ```javascript
+let hasTime = true;
 do {
   // drink coffee
-  // contemplate my day
+  // contemplate my day until hasTime = false
 } while (hasTime);
 ```
 
@@ -134,7 +130,7 @@ do {
 
 # Conditional Loops - A Note of Caution
 
-Be careful using conditional loops because if the condition is never met, they might loop forever.
+Be careful using conditional loops because if the condition is never satisfied, they might loop forever.
 
 ```javascript
 const iceCapsAreMelting = true;
@@ -150,22 +146,38 @@ while (iceCapsAreMelting) {
     break;
   }
 }
+console.log(`The ice caps have melted. The polar bears are gone. We're doomed :(`);
 ```
 
 - - -
 
-# Examples
+# Example
 
-[https://github.com/glowkeeper](https://github.com/glowkeeper)
+```html
+<html>
+  <head>
+    <title>Console Demo</title>
+  </head>
+  <body>
+    <h1>Climate Change!</h1>
+    <script>
+      const iceCapsAreMelting = true;
+      let polarBears = 5;
 
-...and there is some more example code in the next section...
-
-- - -
-
-# Hello (World)
-
-```javascript
-//code goes here
+      // Initiate (possible) infinite loop
+      while (iceCapsAreMelting) {
+        console.log(`There are ${polarBears} polar bears.`);
+        polarBears--;
+        // Terminate the loop if the following condition is true
+        if (polarBears === 0) {
+          console.log("There are no polar bears left.");
+          break;
+        }
+      }
+      console.log(`The ice caps have melted. The polar bears are gone. We're doomed :(`);
+    </script>
+  </body>
+</html>
 ```
 
 - - -
@@ -174,20 +186,23 @@ while (iceCapsAreMelting) {
 
 + An introduction to loops and iteration
 + Javascript loops `for`, `while` and `do`
-+ Some examples
++ Example (`console.log` is your friend)
 
 - - -
 
-# Exercise
+# Exercises
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration
+[Exercises](../exercises/exercises.md)
+
+
 
 - - -
 
 # Useful Resources
 
-+ [https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
-+ [https://www.digitalocean.com/community/tutorials/using-while-loops-and-do-while-loops-in-javascript](https://www.digitalocean.com/community/tutorials/using-while-loops-and-do-while-loops-in-javascript)
++ [MDN Web Docs - Loops and iteration](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration)
++ [DigitalOcean - Using While Loops and Do...While Loops in JavaScript](https://www.digitalocean.com/community/tutorials/using-while-loops-and-do-while-loops-in-javascript)
++ [BBC Bitesize - Iteration in Programming](https://www.bbc.co.uk/bitesize/guides/z3khpv4/revision/7)
 
 - - -
 
