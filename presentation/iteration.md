@@ -89,17 +89,17 @@ console.log(total);
 
 - - -
 
-# An Opinionated Viewpoint
+# `forEach` vs `for`
 
-**Where possible, use the array method `forEach`, not `for`**
+**Where possible, use `forEach`, not `for`**
 
 The `for` loop has its origins in early computer languages like _Fortran_ and _C_, and its control structure, `{initialisation; condition; increment}` can be a little daunting on first view. Besides, often that control structure is _too much detail_.
 
-When you want to _do something to each element of a list_, `forEach` is often a better choice than `for`.
+When you want to _do something to each element of an array_, `forEach` is often a better choice than `for`.
 
 - - -
 
-# An Opinionated Viewpoint (cont'd)
+# `forEach` vs `for` (cont'd)
 
 1. `forEach`
 
