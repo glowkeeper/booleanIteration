@@ -1,12 +1,16 @@
 # Exercises from an Introduction to Loops and Iteration
 
-Below are some exercises that build on the material presented in the [presentation](../presentation/iteration.md).
+Some exercises that build on the material presented in the [presentation](../presentation/iteration.html).
 
-## Prerequisites
+- - -
+
+# Prerequisites
 
 You will need an editor to write your javascript. If you are not using an editor already, I recommend trying [Visual Studio Code](https://code.visualstudio.com/).
 
-### Template
+- - -
+
+# Template
 
 Below is a template you can use for running any of the code you write when solving the exercises below:
 
@@ -24,9 +28,11 @@ Below is a template you can use for running any of the code you write when solvi
 </html>
 ```
 
-## Start at the End
+- - -
 
-During the [presentation](../presentation/iteration.md), `for` loops were introduced. They take the form _{initialisation; condition; increment}_, and the following `for` loop was shown:
+# Start at the End
+
+During the [presentation](../presentation/iteration.html), `for` loops were introduced. They take the form _{initialisation; condition; increment}_, and the following `for` loop was shown:
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
@@ -35,20 +41,26 @@ for (let i = 0; i < coffee.length; i++) {
 }
 ```
 
-How would you rewrite that loop so it outputs the list in reverse order (hint: you can _decrement_ as well)?
+How would you rewrite the loop so it outputs the list in reverse order (hint: you can _decrement_ as well)? Bonus points go to anyone who outputs the console text to the main browser window (as `<p>` tags), instead.
 
-The [presentation](../presentation/iteration.md) also showed a `forEach` version of the same thing:
+- - -
+
+# Start at the End (cont'd)
+
+The [presentation](../presentation/iteration.html) also showed a `forEach` version of the _array_ on the previous slide:
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
 coffee.forEach(element => console.log(element));
 ```
 
-How could you make _that_ output in reverse order, too?
+How could you make _that_ output in reverse order?
 
-## Save the World!
+- - -
 
-The presentation came to the rather depressing conclusion that we're doomed:
+# Save the World!
+
+The [presentation](../presentation/iteration.html) came to the rather depressing conclusion that we're doomed:
 
 ```javascript
 const iceCapsAreMelting = true;
@@ -69,7 +81,9 @@ console.log(`The ice caps have melted. The polar bears are gone. We're doomed :(
 
 It's your chance to save the world! Change the loop so that we end up with 100 polar bears, rather than none! Bonus points go to anyone who outputs the console text to the main browser window (as `<h2>` tags), instead.
 
-## Bonus Exercise
+- - -
+
+# Bonus Exercise
 
 The [presentation](../presentation/iteration.md) demonstrated the following `for` loop:
 
@@ -82,3 +96,5 @@ console.log(total);
 ```
 
 ...which sums (adds up) all the numbers between 1 and 5. But actually, you can find the answer without using a loop. How?
+
+- - -

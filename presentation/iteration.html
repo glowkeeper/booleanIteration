@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title>iteration</title>
+  <style type="text/css">
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" type="text/css" media="screen, projection, print"
+    href="https://www.w3.org/Talks/Tools/Slidy2/styles/slidy.css" />
+  <script src="https://www.w3.org/Talks/Tools/Slidy2/scripts/slidy.js"
+    charset="utf-8" type="text/javascript"></script>
+</head>
+<body>
+<div id="an-introduction-to-loops-and-iteration" class="slide section level1">
+<h1>An Introduction to Loops and Iteration</h1>
+<p>Dr Steve Huckle</p>
+<p>steve@glowkeeper.uk</p>
+<p>August 2021</p>
+</div>
+<div id="lecture-overview" class="slide section level1">
+<h1>Lecture Overview</h1>
+<ul class="incremental">
+<li>Loops and iteration</li>
+<li>Javascript loops</li>
+<li>Exercises</li>
+</ul>
+</div>
+<div id="goals" class="slide section level1">
+<h1>Goals</h1>
+<ol class="incremental" style="list-style-type: decimal">
+<li>Introduce iteration and looping</li>
+<li>Javascript loops</li>
+<li>The <strong>overarching</strong> aim is to encourage you to begin your programming journey by <em>writing some code</em>!</li>
+</ol>
+</div>
+<div id="what-is-iteration" class="slide section level1">
+<h1>What is Iteration?</h1>
+<p>Iteration is the process of repeating steps. For example, I conduct an iterative ritual each morning:</p>
+<ol class="incremental" style="list-style-type: decimal">
+<li>Put water in a kettle and switch it on</li>
+<li>Meanwhile, grind coffee beans and put the ground coffee in a carafe</li>
+<li>Put boiling water in the carafe and replace the lid</li>
+<li>Wait 4 minutes for the coffee to brew, then gently push the plunger all the way down</li>
+<li>Pour the coffee</li>
+<li>Repeat from step 1 until I feel ready to go about my day</li>
+</ol>
+</div>
+<div id="loops" class="slide section level1">
+<h1>Loops</h1>
+<p>In programming, iteration is often referred to as <em>looping</em>, because when a program iterates, it <em>loops</em> through steps. Programming languages implement iteration using statements like <code>for</code> and <code>while</code>.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> done <span class="op">=</span> <span class="kw">false</span><span class="op">;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (<span class="kw">true</span>) {</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// do something that might set done to true</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (done) {</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>  <span class="co">// maybe do something else</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div id="javascript-loops" class="slide section level1">
+<h1>Javascript Loops</h1>
+<p>Javascript has three basic looping statements:</p>
+<ol class="incremental" style="list-style-type: decimal">
+<li><code>for</code></li>
+<li><code>while</code></li>
+<li><code>do</code></li>
+</ol>
+</div>
+<div id="count-control-loops" class="slide section level1">
+<h1>Count Control Loops</h1>
+<p><code>for</code> statements are a form of <em>count control</em> loop, which are useful when you need to iterate a specific number of times.</p>
+<p>Imagine you want to sum all numbers from 1 to 5:</p>
+<ol class="incremental" style="list-style-type: decimal">
+<li>Set the total to 0</li>
+<li>for a count from 1 to 5
+<ol class="incremental" style="list-style-type: decimal">
+<li>Add the count to the total</li>
+</ol></li>
+<li>Output the total</li>
+</ol>
+</div>
+<div id="count-control-loops-contd" class="slide section level1">
+<h1>Count Control Loops (cont’d)</h1>
+<p>Javascript <code>for</code> loops have a control structure of the form <em>{initialisation; condition; increment}</em></p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  total <span class="op">+=</span> i<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(total)<span class="op">;</span></span></code></pre></div>
+<p>The control structure of a <code>for</code> loop can appear quite challenging (at first).</p>
+</div>
+<div id="foreach" class="slide section level1">
+<h1>forEach</h1>
+<p>When you want to <em>do something to each element of an array</em>, <code>forEach</code> might be a better choice.</p>
+<p><code>forEach</code></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> coffee <span class="op">=</span> [<span class="st">&#39;Water&#39;</span><span class="op">,</span> <span class="st">&#39;Kettle&#39;</span><span class="op">,</span> <span class="st">&#39;Grind&#39;</span><span class="op">,</span> <span class="st">&#39;Carafe&#39;</span><span class="op">,</span> <span class="st">&#39;Brew&#39;</span><span class="op">,</span> <span class="st">&#39;Pour&#39;</span><span class="op">,</span> <span class="st">&#39;Enjoy&#39;</span>]<span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>coffee<span class="op">.</span><span class="fu">forEach</span>(forEach <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(element))<span class="op">;</span></span></code></pre></div>
+<p><code>for</code></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> coffee <span class="op">=</span> [<span class="st">&#39;Water&#39;</span><span class="op">,</span> <span class="st">&#39;Kettle&#39;</span><span class="op">,</span> <span class="st">&#39;Grind&#39;</span><span class="op">,</span> <span class="st">&#39;Carafe&#39;</span><span class="op">,</span> <span class="st">&#39;Brew&#39;</span><span class="op">,</span> <span class="st">&#39;Pour&#39;</span><span class="op">,</span> <span class="st">&#39;Enjoy&#39;</span>]<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> coffee<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(coffee)<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+</div>
+<div id="conditional-loops" class="slide section level1">
+<h1>Conditional Loops</h1>
+<p>A conditional loop iterates <em>while</em> (or <em>until</em>) a condition is met.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> hasTime <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">do</span> {</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// drink coffee</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// contemplate my day until hasTime = false</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>} <span class="cf">while</span> (hasTime)<span class="op">;</span></span></code></pre></div>
+</div>
+<div id="conditional-loops-contd" class="slide section level1">
+<h1>Conditional Loops (cont’d)</h1>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> iceCapsAreMelting <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> polarBears <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Initiate (possible) infinite loop</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (iceCapsAreMelting) {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`There are </span><span class="sc">${</span>polarBears<span class="sc">}</span><span class="vs"> polar bears.`</span>)<span class="op">;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  polarBears<span class="op">--;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Terminate the loop if the following condition is true</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (polarBears <span class="op">===</span> <span class="dv">0</span>) {</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;There are no polar bears left.&quot;</span>)<span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;The ice caps have melted. The polar bears are gone. WE. ARE. DOOMED :(&quot;</span>)<span class="op">;</span></span></code></pre></div>
+<p><strong>Note</strong>: Be careful using conditional loops because if the condition is never satisfied, they might loop forever.</p>
+</div>
+<div id="example" class="slide section level1">
+<h1>Example</h1>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;head&gt;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;title&gt;</span>Console Demo<span class="kw">&lt;/title&gt;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/head&gt;</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;body&gt;</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;h1&gt;</span>Climate Change!<span class="kw">&lt;/h1&gt;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;script&gt;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> iceCapsAreMelting <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>      <span class="kw">let</span> polarBears <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>      <span class="co">// Initiate (possible) infinite loop</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">while</span> (iceCapsAreMelting) {</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`There are </span><span class="sc">${</span>polarBears<span class="sc">}</span><span class="vs"> polar bears.`</span>)<span class="op">;</span></span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>        polarBears<span class="op">--;</span></span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Terminate the loop if the following condition is true</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> (polarBears <span class="op">===</span> <span class="dv">0</span>) {</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>          <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;There are no polar bears left.&quot;</span>)<span class="op">;</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>          <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        }</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>      }</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`The ice caps have melted. The polar bears are gone. We&#39;re doomed :(`</span>)<span class="op">;</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/script&gt;</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/body&gt;</span></span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/html&gt;</span></span></code></pre></div>
+</div>
+<div id="recap" class="slide section level1">
+<h1>Recap</h1>
+<ul class="incremental">
+<li>An introduction to loops and iteration</li>
+<li>Javascript loops <code>for</code> (<code>forEach</code>), <code>while</code> and <code>do</code></li>
+<li>Example (<code>console.log</code> is your friend)</li>
+</ul>
+</div>
+<div id="exercises" class="slide section level1">
+<h1>Exercises</h1>
+<p>Some <a href="../exercises/exercises.html">exercises</a>…</p>
+</div>
+<div id="useful-resources" class="slide section level1">
+<h1>Useful Resources</h1>
+<ul class="incremental">
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration">MDN Web Docs - Loops and iteration</a></li>
+<li><a href="https://www.digitalocean.com/community/tutorials/using-while-loops-and-do-while-loops-in-javascript">DigitalOcean - Using While Loops and Do…While Loops in JavaScript</a></li>
+<li><a href="https://www.bbc.co.uk/bitesize/guides/z3khpv4/revision/7">BBC Bitesize - Iteration in Programming</a></li>
+</ul>
+</div>
+<div id="thank-you" class="slide section level1">
+<h1>Thank-you</h1>
+<p>Dr Steve Huckle</p>
+<p>steve@glowkeeper.uk</p>
+</div>
+</body>
+</html>

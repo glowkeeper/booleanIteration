@@ -68,10 +68,12 @@ Javascript has three basic looping statements:
 
 `for` statements are a form of _count control_ loop, which are useful when you need to iterate a specific number of times.
 
+Imagine you want to sum all numbers from 1 to 5:
+
 1. Set the total to 0
 2. for a count from 1 to 5
     1. Add the count to the total
-3. Output the total (the sum of all numbers between 1 and 5)
+3. Output the total
 
 - - -
 
@@ -87,7 +89,7 @@ for (let i = 1; i <= 5; i++) {
 console.log(total);
 ```
 
-The control structure of a `for` loop can appear quite challenging at first.
+The control structure of a `for` loop can appear quite challenging (at first).
 
 - - -
 
@@ -95,14 +97,14 @@ The control structure of a `for` loop can appear quite challenging at first.
 
 When you want to _do something to each element of an array_, `forEach` might be a better choice.
 
-1. `forEach`
+`forEach`
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
 coffee.forEach(forEach => console.log(element));
 ```
 
-2. `for`
+`for`
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
@@ -143,7 +145,7 @@ while (iceCapsAreMelting) {
     break;
   }
 }
-console.log(`The ice caps have melted. The polar bears are gone. We're doomed :(`);
+console.log("The ice caps have melted. The polar bears are gone. WE. ARE. DOOMED :(");
 ```
 
 **Note**: Be careful using conditional loops because if the condition is never satisfied, they might loop forever.
@@ -184,16 +186,14 @@ console.log(`The ice caps have melted. The polar bears are gone. We're doomed :(
 # Recap
 
 + An introduction to loops and iteration
-+ Javascript loops `for`, `while` and `do`
++ Javascript loops `for` (`forEach`), `while` and `do`
 + Example (`console.log` is your friend)
 
 - - -
 
 # Exercises
 
-[Exercises](../exercises/exercises.md)
-
-
+Some [exercises](../exercises/exercises.html)...
 
 - - -
 
