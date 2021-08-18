@@ -12,21 +12,25 @@ August 2021
 
 + Loops and iteration
 + Javascript loops
-+ Exercises
++ Examples
 
 - - -
 
 # Goals
 
-1. Introduce iteration and looping
-2. Javascript loops
-3. The **overarching** aim is to encourage you to begin your programming journey by _writing some code_!
+At the end of this lecture, I hope that you will:
+
+1. Have an understanding of iteration
+2. Have a grasp of three types of Javascript loop
+3. _Write some code using those loops_!
 
 - - -
 
 # What is Iteration?
 
-Iteration is the process of repeating steps. For example, I conduct an iterative ritual each morning:
+Iteration is the process of repeating steps. 
+
+For example, I conduct an iterative ritual each morning:
 
 1. Put water in a kettle and switch it on
 2. Meanwhile, grind coffee beans and put the ground coffee in a carafe
@@ -40,20 +44,6 @@ Iteration is the process of repeating steps. For example, I conduct an iterative
 # Loops
 
 In programming, iteration is often referred to as _looping_, because when a program iterates, it _loops_ through steps.
-
-Programming languages implement loops using statements like `for` and `while`.
-
-```javascript
-let done = false;
-while (true) {
-  // do something that might set done to true
-  if (done) {
-    break;
-  }
-  // maybe do something else
-}
-// do something after the loop
-```
 
 - - -
 
@@ -69,45 +59,11 @@ Javascript has three basic looping statements:
 
 # Count Control Loops
 
-`for` statements are a form of _count control_ loop, which are useful when you need to iterate a specific number of times.
+Javascript `for` statements are a form of _count control_ loop, which are useful when you need to iterate a specific number of times.
 
-Imagine you want to sum all the numbers from 1 to 5:
+# for
 
-1. Set the total to 0
-2. for a count from 1 to 5
-    1. Add the count to the total
-3. Output the total
-
-- - -
-
-# Count Control Loops (cont'd)
-
-Javascript `for` loops have a control structure of the form _{initialisation; condition; increment}_
-
-```javascript
-let total = 0;
-for (let i = 1; i <= 5; i++) {
-  total += i;
-}
-console.log(total);
-```
-
-The control structure of a `for` loop can appear quite challenging (at first).
-
-- - -
-
-# forEach
-
-When you want to _do something to each element of an array_, `forEach` might be a better choice.
-
-`forEach`
-
-```javascript
-const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
-coffee.forEach(element => console.log(element));
-```
-
-`for`
+Javascript `for` statements have a control structure of the form _{initialisation; condition; increment}_
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
@@ -116,11 +72,42 @@ for (let i = 0; i < coffee.length; i++) {
 }
 ```
 
+The control structure of a `for` loop can appear quite challenging (at first).
+
+- - -
+
+# forEach
+
+When you want to _do something to each element of an array_, `forEach` is probably a better choice.
+
+`forEach`
+
+```javascript
+const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
+coffee.forEach(element => console.log(element));
+```
+
 - - -
 
 # Conditional Loops
 
 A conditional loop iterates _while_ (or _until_) a condition is met.
+
+# while
+
+```javascript
+let done = false;
+while (true) {
+  // do something that might set done to true
+  if (done) {
+    break;
+  }
+  // maybe do something else
+}
+// do something after the loop
+```
+
+# do
 
 ```javascript
 let hasTime = true;
@@ -133,7 +120,7 @@ do {
 
 - - -
 
-# Conditional Loops (cont'd)
+# Example
 
 ```javascript
 const iceCapsAreMelting = true;
@@ -156,7 +143,7 @@ console.log("The ice caps have melted. The polar bears are gone. WE. ARE. DOOMED
 
 - - -
 
-# Example
+# Putting it All Together
 
 The html:
 
@@ -177,7 +164,7 @@ The html:
 </html>
   ```
 
-# Example (cont'd)
+# Putting it All Together (cont'd)
 
 The Javascript:
 
@@ -205,6 +192,7 @@ while (iceCapsAreMelting) {
     break;
   }
 }
+
 result.innerText += doomed;
 console.log(doomed);
 ```
@@ -214,8 +202,8 @@ console.log(doomed);
 # Recap
 
 + An introduction to loops and iteration
-+ Javascript loops `for` (`forEach`), `while` and `do`
-+ Example (`console.log` is your friend)
++ Javascript loops `forEach` (`for`), `while` and `do`
++ An example that runs in the browser
 
 - - -
 
@@ -224,6 +212,11 @@ console.log(doomed);
 Some [exercises](../exercises/exercises.html)...
 
 - - -
+
+# Slides
+
++ Presentation - [https://github.com/glowkeeper/booleanIteration/blob/main/exercises/exercises.md](https://github.com/glowkeeper/booleanIteration/blob/main/presentation/iteration.md)
++ Exercises [https://github.com/glowkeeper/booleanIteration/blob/main/exercises/exercises.md](https://github.com/glowkeeper/booleanIteration/blob/main/exercises/exercises.md)
 
 # Useful Resources
 

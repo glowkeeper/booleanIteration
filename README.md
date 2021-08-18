@@ -1,6 +1,6 @@
 # Boolean Iteration
 
-[Presentation](/presentation/iteration.md) on Loops and Iteration for [Boolean](https://boolean.co.uk/).
+A [presentation](/presentation/iteration.md) on _loops and iteration_ for [Boolean](https://boolean.co.uk/). Included are some [exercises](/exercises/exercises.md), too.
 
 ## Install
 
@@ -12,7 +12,7 @@ And in the [exercises](/exercises) subdirectory, run:
 
 `pandoc -s --webtex -i -t slidy exercises.md -o exercises.html`
 
-You can then open _iteration.html_ in your favourite browser.
+You can then open _iteration.html_ and exercises.html in your favourite browser.
 
 ## License
 

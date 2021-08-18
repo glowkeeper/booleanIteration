@@ -87,15 +87,16 @@
 <body>
 <div id="exercises-from-an-introduction-to-loops-and-iteration" class="slide section level1">
 <h1>Exercises from an Introduction to Loops and Iteration</h1>
-<p>Below are some exercises that build on the material presented in the <a href="../presentation/iteration.html">presentation</a>. Some of these exercises are tricky - congratulations if you manage them all! But please do email steve@glowkeeper.uk and ask for help if you need it!</p>
+<p>Below are some exercises that build on the material from the <a href="../presentation/iteration.html">presentation</a>.</p>
+<p>Some of these exercises are tricky! Congratulations if you manage them all! But please do email steve@glowkeeper.uk and ask for help if you need it</p>
 </div>
 <div id="prerequisites" class="slide section level1">
 <h1>Prerequisites</h1>
-<p>You will need an editor to write your javascript. If you are not using an editor already, <a href="https://codesandbox.io/">CodeSandbox</a> is a good solution for these exercises, since you’’ be able to easily share your work and get help. - - -</p>
+<p>You will need an editor to write your javascript. If you are not using an editor already, <a href="https://codesandbox.io/">CodeSandbox</a> is a good solution for these exercises as it allows you to easily share your work and get help.</p>
 </div>
 <div id="template" class="slide section level1">
 <h1>Template</h1>
-<p>Below is a template <code>html</code> you should use for the exercises:</p>
+<p>Below is a template <em>index.html</em> you should use for the exercises:</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dt">&lt;!DOCTYPE </span>html<span class="dt">&gt;</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;html&gt;</span></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;head&gt;</span></span>
@@ -113,49 +114,39 @@
 </div>
 <div id="start-at-the-end" class="slide section level1">
 <h1>Start at the End</h1>
-<p>During the <a href="../presentation/iteration.html">presentation</a>, <code>for</code> loops were introduced. They take the form <em>{initialisation; condition; increment}</em>, and the following <code>for</code> loop was shown:</p>
+<p>The <a href="../presentation/iteration.html">presentation</a> showed <code>forEach</code> outputting the elements of an <em>array</em>:</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> coffee <span class="op">=</span> [<span class="st">&#39;Water&#39;</span><span class="op">,</span> <span class="st">&#39;Kettle&#39;</span><span class="op">,</span> <span class="st">&#39;Grind&#39;</span><span class="op">,</span> <span class="st">&#39;Carafe&#39;</span><span class="op">,</span> <span class="st">&#39;Brew&#39;</span><span class="op">,</span> <span class="st">&#39;Pour&#39;</span><span class="op">,</span> <span class="st">&#39;Enjoy&#39;</span>]<span class="op">;</span></span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> coffee<span class="op">.</span><span class="at">length</span><span class="op">;</span> i<span class="op">++</span>) {</span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(coffee[i])<span class="op">;</span></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
-<p>How would you rewrite the loop so it outputs the list in reverse order (hint: you can <em>decrement</em> as well)?</p>
-<p>Bonus points go to anyone who outputs the console text to the main browser window, instead (<strong>hint</strong>: the presentation outputs to the browser window, so you could get some ideas from there).</p>
-</div>
-<div id="start-at-the-end-contd" class="slide section level1">
-<h1>Start at the End (cont’d)</h1>
-<p>The <a href="../presentation/iteration.html">presentation</a> also showed a <code>forEach</code> version of the <em>array</em> on the previous slide:</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> coffee <span class="op">=</span> [<span class="st">&#39;Water&#39;</span><span class="op">,</span> <span class="st">&#39;Kettle&#39;</span><span class="op">,</span> <span class="st">&#39;Grind&#39;</span><span class="op">,</span> <span class="st">&#39;Carafe&#39;</span><span class="op">,</span> <span class="st">&#39;Brew&#39;</span><span class="op">,</span> <span class="st">&#39;Pour&#39;</span><span class="op">,</span> <span class="st">&#39;Enjoy&#39;</span>]<span class="op">;</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>coffee<span class="op">.</span><span class="fu">forEach</span>(element <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(element))<span class="op">;</span></span></code></pre></div>
-<p>How could you make <em>that</em> output in reverse order (<strong>hint</strong>: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse">Array.prototype.reverse</a>).</p>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>coffee<span class="op">.</span><span class="fu">forEach</span>(element <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(element))<span class="op">;</span></span></code></pre></div>
+<p>How could you make that log to the console in reverse order? Bonus points go to anyone who outputs the text to the main browser window, instead of the console.</p>
 </div>
 <div id="save-the-world" class="slide section level1">
 <h1>Save the World!</h1>
 <p>The <a href="../presentation/iteration.html">presentation</a> came to the rather depressing conclusion that we’re doomed:</p>
-<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> iceCapsAreMelting <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> polarBears <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Initiate (possible) infinite loop</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (iceCapsAreMelting) {</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`There are </span><span class="sc">${</span>polarBears<span class="sc">}</span><span class="vs"> polar bears.`</span>)<span class="op">;</span></span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  polarBears<span class="op">--;</span></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Terminate the loop if the following condition is true</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (polarBears <span class="op">===</span> <span class="dv">0</span>) {</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;There are no polar bears left. Boo&quot;</span>)<span class="op">;</span></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span><span class="op">;</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`The ice caps have melted. The polar bears are gone. WE. ARE. DOOMED :(`</span>)<span class="op">;</span></span></code></pre></div>
-<p>It’s your chance to save the world! Change the loop so that it only iterates while the ice caps are <em>not</em> melting and so we end up with 100 polar bears, rather than none! You should also change the messages that get output to something more appropriate. Bonus points go to anyone who outputs the text to the main browser window, instead of the console.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> iceCapsAreMelting <span class="op">=</span> <span class="kw">true</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> polarBears <span class="op">=</span> <span class="dv">5</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Initiate (possible) infinite loop</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="cf">while</span> (iceCapsAreMelting) {</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`There are </span><span class="sc">${</span>polarBears<span class="sc">}</span><span class="vs"> polar bears.`</span>)<span class="op">;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  polarBears<span class="op">--;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// Terminate the loop if the following condition is true</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (polarBears <span class="op">===</span> <span class="dv">0</span>) {</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;There are no polar bears left. Boo&quot;</span>)<span class="op">;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="cf">break</span><span class="op">;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`The ice caps have melted. The polar bears are gone. WE. ARE. DOOMED :(`</span>)<span class="op">;</span></span></code></pre></div>
+<p>It’s your chance to save the world! Change the loop so that it only iterates while the ice caps are <em>not</em> melting and so we end up with 100 polar bears, rather than none! You should also change the messages that get output to something more appropriate. Again, bonus points go to anyone who outputs the text to the main browser window, instead of the console.</p>
 </div>
-<div id="bonus-exercise" class="slide section level1">
-<h1>Bonus Exercise</h1>
-<p>The <a href="../presentation/iteration.md">presentation</a> demonstrated a <code>for</code> loop that sums (adds up) all the numbers between 1 and 5:</p>
-<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">;</span> i<span class="op">++</span>) {</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  total <span class="op">+=</span> i<span class="op">;</span></span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(total)<span class="op">;</span></span></code></pre></div>
-<p>But actually, you can find the sum of all the numbers up to any given number without using a loop. Please write some loop-free code that writes the sum of 100 to the console.</p>
+<div id="optional-exercise" class="slide section level1">
+<h1>Optional Exercise</h1>
+<p>The <a href="../presentation/iteration.md">presentation</a> mentioned that the structure of a <code>for</code> loop can appear quite challenging on first view. Indeed, the advice was that when you start your programming journey, you might want to avoid using <code>for</code> altogether. This exercise is all about avoiding a <code>for</code> loop!</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> total <span class="op">=</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">1</span><span class="op">;</span> i <span class="op">&lt;=</span> <span class="dv">5</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  total <span class="op">+=</span> i<span class="op">;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(total)<span class="op">;</span></span></code></pre></div>
+<p>That script sums (adds up) all the numbers from 1 to 5 inclusive. But actually, you can find the sum of all the numbers up to any given number without using a loop! Please write some loop-free code that writes the sum of 100 to the console.</p>
 </div>
 <div class="slide section level1">
 

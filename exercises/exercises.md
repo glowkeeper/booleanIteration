@@ -1,17 +1,20 @@
 # Exercises from an Introduction to Loops and Iteration
 
-Below are some exercises that build on the material presented in the [presentation](../presentation/iteration.html). Some of these exercises are tricky -  congratulations if you manage them all! But please do email steve@glowkeeper.uk and ask for help if you need it!
+Below are some exercises that build on the material from the [presentation](../presentation/iteration.html).
+
+Some of these exercises are tricky! Congratulations if you manage them all! But please do email steve@glowkeeper.uk and ask for help if you need it
 
 - - -
 
 # Prerequisites
 
-You will need an editor to write your javascript. If you are not using an editor already, [CodeSandbox](https://codesandbox.io/) is a good solution for these exercises, since you'' be able to easily share your work and get help.
+You will need an editor to write your javascript. If you are not using an editor already, [CodeSandbox](https://codesandbox.io/) is a good solution for these exercises as it allows you to easily share your work and get help.
+
 - - -
 
 # Template
 
-Below is a template `html` you should use for the exercises:
+Below is a template _index.html_ you should use for the exercises:
 
 ```html
 <!DOCTYPE html>
@@ -30,35 +33,16 @@ Below is a template `html` you should use for the exercises:
 </html>
 ```
 
-- - -
-
 # Start at the End
 
-During the [presentation](../presentation/iteration.html), `for` loops were introduced. They take the form _{initialisation; condition; increment}_, and the following `for` loop was shown:
-
-```javascript
-const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
-for (let i = 0; i < coffee.length; i++) {
-  console.log(coffee[i]);
-}
-```
-
-How would you rewrite the loop so it outputs the list in reverse order (hint: you can _decrement_ as well)? 
-
-Bonus points go to anyone who outputs the console text to the main browser window, instead (**hint**: the presentation outputs to the browser window, so you could get some ideas from there).
-
-- - -
-
-# Start at the End (cont'd)
-
-The [presentation](../presentation/iteration.html) also showed a `forEach` version of the _array_ on the previous slide:
+The [presentation](../presentation/iteration.html) showed `forEach` outputting the elements of an _array_:
 
 ```javascript
 const coffee = ['Water', 'Kettle', 'Grind', 'Carafe', 'Brew', 'Pour', 'Enjoy'];
 coffee.forEach(element => console.log(element));
 ```
 
-How could you make _that_ output in reverse order (**hint**: [Array.prototype.reverse](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse)).
+How could you make that log to the console in reverse order? Bonus points go to anyone who outputs the text to the main browser window, instead of the console.
 
 - - -
 
@@ -83,13 +67,13 @@ while (iceCapsAreMelting) {
 console.log(`The ice caps have melted. The polar bears are gone. WE. ARE. DOOMED :(`);
 ```
 
-It's your chance to save the world! Change the loop so that it only iterates while the ice caps are _not_ melting and so we end up with 100 polar bears, rather than none! You should also change the messages that get output to something more appropriate. Bonus points go to anyone who outputs the text to the main browser window, instead of the console.
+It's your chance to save the world! Change the loop so that it only iterates while the ice caps are _not_ melting and so we end up with 100 polar bears, rather than none! You should also change the messages that get output to something more appropriate. Again, bonus points go to anyone who outputs the text to the main browser window, instead of the console.
 
 - - -
 
-# Bonus Exercise
+# Optional Exercise
 
-The [presentation](../presentation/iteration.md) demonstrated a `for` loop that sums (adds up) all the numbers between 1 and 5:
+The [presentation](../presentation/iteration.md) mentioned that the structure of a `for` loop can appear quite challenging on first view. Indeed, the advice was that when you start your programming journey, you might want to avoid using `for` altogether. This exercise is all about avoiding a `for` loop!
 
 ```javascript
 let total = 0;
@@ -99,6 +83,6 @@ for (let i = 1; i <= 5; i++) {
 console.log(total);
 ```
 
-But actually, you can find the sum of all the numbers up to any given number without using a loop. Please write some loop-free code that writes the sum of 100 to the console.
+That script sums (adds up) all the numbers from 1 to 5 inclusive. But actually, you can find the sum of all the numbers up to any given number without using a loop! Please write some loop-free code that writes the sum of 100 to the console.
 
 - - -
