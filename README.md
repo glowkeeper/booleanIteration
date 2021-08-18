@@ -12,7 +12,7 @@ And in the [exercises](/exercises) subdirectory, run:
 
 `pandoc -s --webtex -i -t slidy exercises.md -o exercises.html`
 
-You can then open _iteration.html_ and exercises.html in your favourite browser.
+You can then open _iteration.html_ and _exercises.html_ in your favourite browser.
 
 ## License
 
